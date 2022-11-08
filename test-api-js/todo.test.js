@@ -26,8 +26,12 @@ describe('todo test suite', () => {
             "done": false
         };
         expect(todo_service.add_todo(todo).todo.length).toEqual(todo_service.get_todos().todo.length);
+    });  
+    test("delete_todo", () => {
+        const id = '1';
+        expect(todo_service.delete_todo(id).length).toEqual(count-1);
     });    
-    // Write all your test cases here that corresponds to software requirements
+        // Write all your test cases here that corresponds to software requirements
 
 
 });
