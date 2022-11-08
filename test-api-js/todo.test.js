@@ -18,9 +18,15 @@ describe('todo test suite', () => {
     test("get_todos", () => {
         expect(todo_service.get_todos().todo.length).toEqual(3);
     });
-
     
-
+    test("add_todo", () => {
+        const todo - {
+            "title": "T1",
+            "description": "D1",
+            "done": false
+        };
+        expect(todo_service.add_todo(todo).todo.length).toEqual(todo_service.get_todos().todo.length);
+    });    
     // Write all your test cases here that corresponds to software requirements
 
 
