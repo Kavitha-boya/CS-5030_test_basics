@@ -17,21 +17,3 @@ describe("todo api test suite", () => {
 });
 });
 
-describe("add todo api test suite", () => {
-   test("POST /", (done) => {
-      const todo = {
-         "title": "T1"
-         "description": "D1"
-         "done": false
-      };
-      request(app).post("/addtodolist").send(todo)
-          .expect('Content-Type', /json/)
-          .expect(200)
-          // .expect(res.body.todo.length).toEqual(3)
-          .end((err, res) => {
-              if (err) return done(err);
-              return done();
-      })
-   });
-});   
-      
