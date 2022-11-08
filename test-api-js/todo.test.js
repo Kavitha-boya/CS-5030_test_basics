@@ -30,7 +30,17 @@ describe('todo test suite', () => {
     test("delete_todo", () => {
         const id = '1';
         expect(todo_service.delete_todo(id).length).toEqual(count-1);
-    });    
+    });  
+    
+    test("update Todo",() => {
+            const id = 1;
+            const todo = {
+                "title": "T1",
+                "description": "D1",
+                "done": true
+            };
+            todo_service.update_todo(id,todo);
+            expect(todo_service.todos.todo[id]).toEqual(todo);
         // Write all your test cases here that corresponds to software requirements
 
 
