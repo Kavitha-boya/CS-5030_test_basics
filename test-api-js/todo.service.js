@@ -30,11 +30,14 @@ class todoservice{
 
     delete_todo(id){
         // Your code here
-        return this.todos = this.todos.todo.splice(index, id)
+        this.todos = this.todos.todo.splice(index, id)
+        return this.todos 
     }
 
     update_todo(id, todo){
         // Your code here
+        this.todos.todo[id] = this.todos
+        return this.todos
     }
 }
 
